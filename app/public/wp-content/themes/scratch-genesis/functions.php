@@ -24,6 +24,7 @@ load_child_theme_textdomain('scratch-genesis');
   *
   * @since 1.0.0
   */
+  
  function scratch_genesis_setup() {
 
  }
