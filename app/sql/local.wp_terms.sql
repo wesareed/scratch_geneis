@@ -1,0 +1,32 @@
+/*!40101 SET NAMES binary*/;
+/*!40014 SET FOREIGN_KEY_CHECKS=0*/;
+/*!40103 SET TIME_ZONE='+00:00' */;
+INSERT INTO `wp_terms` VALUES
+(1,"Uncategorized","uncategorized",0),
+(2,"Category #1","category-1",0),
+(3,"Category #2","category-2",0),
+(4,"Category #3","category-3",0),
+(5,"Category #4","category-4",0),
+(6,"Category #5","category-5",0),
+(7,"Post Formats","post-formats",0),
+(8,"Sub Category 1.1","sub-category-11",0),
+(9,"Sub Category 1.2","sub-category-12",0),
+(10,"Sub Category 1.3","sub-category-13",0),
+(11,"Sub Category 2.1","sub-category-21",0),
+(12,"Sub Category 2.2","sub-category-22",0),
+(13,"Sub Category 2.3","sub-category-23",0),
+(14,"Sub Category 3.1","sub-category-31",0),
+(15,"Sub Category 3.2","sub-category-32",0),
+(16,"Sub Category 3.3","sub-category-33",0),
+(17,"Blockquotes","blockquotes",0),
+(18,"Headlines","headlines",0),
+(19,"Images Centered","images-centered",0),
+(20,"Images Left","images-left",0),
+(21,"Images Right","images-right",0),
+(22,"Ordered Lists","ordered-lists",0),
+(23,"Tables","tables",0),
+(24,"Threaded Comments","threaded-comments",0),
+(25,"Unordered Lists","unordered-lists",0),
+(26,"After Header Navigation","after-header-navigation",0),
+(27,"Footer Navigation","footer-navigation",0),
+(28,"Header Navigation","header-navigation",0);

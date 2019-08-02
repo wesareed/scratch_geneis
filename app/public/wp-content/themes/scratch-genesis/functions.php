@@ -16,7 +16,7 @@ load_child_theme_textdomain('scratch-genesis');
  
  
 
- add_action('genesis_setup', 'scratch_genesis_setup');
+ add_action('genesis_setup', 'scratch_genesis_setup', 15);
  /**
   * Theme setup.
   *
@@ -52,5 +52,15 @@ load_child_theme_textdomain('scratch-genesis');
 
     //Add theme support for footer widgets
     add_theme_support( 'genesis-footer-widgets', 3 );
+
+    //Unregister layouts that use secondary sidbar
+    genesis_unregister_layout( 'content-sidebar-sidebar' );
+    genesis_unregister_layout( 'sidebar-content-sidebar' );
+    genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+    //Unregister secondary sidebar
+    unregister_sidebar( 'sidebar-alt' );
+
+    include_once( get_stylesheet_directory() . '/inc/widget-areas.php' ); 
 
  }
