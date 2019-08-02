@@ -64,3 +64,11 @@ load_child_theme_textdomain('scratch-genesis');
     include_once( get_stylesheet_directory() . '/inc/widget-areas.php' ); 
 
  }
+
+
+//Add Google Fonts stylesheet
+add_action( 'wp_enqueue_scripts', 'scratch_genesis_enqueue_style');
+function scratch_genesis_enqueue_style() {
+    wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,700|Lobster' );
+}
+    
