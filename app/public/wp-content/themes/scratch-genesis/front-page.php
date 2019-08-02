@@ -10,6 +10,10 @@
  * @license   MIT
  * 
  */
+
+add_action( 'genesis_meta', 'scratch_genesis_home_page_setup');
+
+
 function scratch_genesis_home_page_setup() {
 
     $home_sidebars = array(
@@ -24,14 +28,50 @@ function scratch_genesis_home_page_setup() {
 
     //Add home welcome area if "Home Welcome" widget area is active
     if ($home_sidebars['home_welcome']) {
-        //
+        add_action( 'genesis_after_header', 'scratch_genesis_add_home_welcome' );
     }
 
     //Add call to action area if "Call To Action" widget area is active
     if ($home_sidebars['call_to_action']) {
-        //
+        add_action( 'genesis_after_header', 'scratch_genesis_add_call_to_action' );
     }
 
+}
+
+
+ /**
+  *
+  * Display content for the "Home Welcome" section
+  *
+  * @since 1.0.0
+  */
+
+function scratch_genesis_add_home_welcome() {
+    genesis_widget_area( 'home-welcome',
+        array(
+            'before' => '<div class="home-welcome"><div class="wrap">',
+            'after'  => '</div></div>',
+        )
+
+    );
+}
+
+
+ /**
+  *
+  * Display content for the "Call To Action" section
+  *
+  * @since 1.0.0
+  */
+
+  function scratch_genesis_add_call_to_action() {
+    genesis_widget_area( 'call-to-action',
+        array(
+            'before' => '<div class="call-to-action"><div class="wrap">',
+            'after'  => '</div></div>',
+        )
+
+    );
 }
 
  genesis();
