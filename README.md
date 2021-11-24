@@ -1,2 +1,2 @@
-# scratch_geneis
+# scratch_genesis
 genesis child theme
